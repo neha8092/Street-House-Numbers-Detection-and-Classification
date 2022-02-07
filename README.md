@@ -1,6 +1,7 @@
 # Street-House-Numbers-Detection-and-Classification
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/neha8092/Street-House-Numbers-Detection-and-Classification/app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/neha8092/Street-House-Numbers-Detection-and-Classification/app.py/) [![GitHub URL](https://img.shields.io/badge/author-Neha%20Gupta-brightgreen)](https://github.com/neha8092)
+[![LinkedIn URL](https://img.shields.io/badge/-Neha%20Gupta-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/neha-gupta-96096562/)
 
 
 ### OUTLINE
