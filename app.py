@@ -45,20 +45,22 @@ if __name__=='__main__':
     final_image= run(demo_image)
 
     st.image(
-            final_image, caption=f"Sample Processed image", use_column_width=True,
+            final_image, caption=f"Sample Processed image", width=50,
                  )
     
-    st.header("Above is the sample Output. Upload an image of your choice to detect the House Numbers")
+    st.header("Above is the sample Output. 
+              "Upload an image from with a House Number.")
+    st.write("You can also test on the sample images in my github repo in the input/ folder")
     
     file_uploaded = st.file_uploader("Upload Image", type=["png", "jpg", "jpeg"])
-    class_btn = st.button("Detect and Classify")
+    class_btn = st.button("               Detect and Classify                ")
     
     if file_uploaded is not None:    
         #image = Image.open(file_uploaded)
         file_bytes = np.asarray(bytearray(file_uploaded.read()), dtype=np.uint8)
         opencv_image = cv2.imdecode(file_bytes, 1)
         opencv_image=cv2.cvtColor(opencv_image, cv2.COLOR_BGR2RGB)
-        st.image(opencv_image, caption='Uploaded Image', use_column_width=True)
+        st.image(opencv_image, caption='Uploaded Image', width=50)
         
     if class_btn:
         if file_uploaded is None:
@@ -67,7 +69,7 @@ if __name__=='__main__':
             with st.spinner('Model working....'):
                 final_image = run(opencv_image)
                 st.image(
-                    final_image, caption=f"Processed image", use_column_width=True,
+                    final_image, caption=f"Processed image", width=50,
                       )
     
     st.write("Note: There could be some false positives when detecting the house numbers. I will be improving the same with time.. Till then, please use the existing model :) ")
