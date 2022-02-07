@@ -45,7 +45,7 @@ if __name__=='__main__':
     final_image= run(demo_image)
 
     st.image(
-            final_image, caption=f"Sample Processed image", width=50,
+            final_image, caption=f"Sample Processed image", width=150,
                  )
     
     st.header("Above is the sample Output.")
@@ -61,7 +61,7 @@ if __name__=='__main__':
         file_bytes = np.asarray(bytearray(file_uploaded.read()), dtype=np.uint8)
         opencv_image = cv2.imdecode(file_bytes, 1)
         opencv_image=cv2.cvtColor(opencv_image, cv2.COLOR_BGR2RGB)
-        st.image(opencv_image, caption='Uploaded Image', width=50)
+        st.image(opencv_image, caption='Uploaded Image', width=150)
         
     if class_btn:
         if file_uploaded is None:
@@ -70,7 +70,7 @@ if __name__=='__main__':
             with st.spinner('Model working....'):
                 final_image = run(opencv_image)
                 st.image(
-                    final_image, caption=f"Processed image", width=50,
+                    final_image, caption=f"Processed image", width=150,
                       )
     
     st.write("Note: There could be some false positives when detecting the house numbers. I will be improving the same with time.. Till then, please use the existing model :) ")
