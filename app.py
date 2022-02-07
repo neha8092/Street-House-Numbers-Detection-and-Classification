@@ -48,9 +48,10 @@ if __name__=='__main__':
             final_image, caption=f"Sample Processed image", width=50,
                  )
     
-    st.header("Above is the sample Output. 
-              "Upload an image from with a House Number.")
-    st.write("You can also test on the sample images in my github repo in the input/ folder")
+    st.header("Above is the sample Output.")
+    st.header("Upload an image from with a House Number.")
+    
+    st.write("Note: You can also test on the sample images in my github repo in the input/ folder")
     
     file_uploaded = st.file_uploader("Upload Image", type=["png", "jpg", "jpeg"])
     class_btn = st.button("               Detect and Classify                ")
